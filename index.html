@@ -608,6 +608,27 @@
 
   </div>
 
+  <section class="approach-section" aria-label="Pourquoi choisir ETHOS DES LEADERS">
+    <div class="section-kicker"><span>02</span> POURQUOI CHOISIR EDL ?</div>
+    <div class="approach-grid">
+      <article class="approach-card reveal">
+        <span class="approach-index">01</span>
+        <h3>Une vision stratégique</h3>
+        <p>Nous aidons les dirigeants à clarifier leur trajectoire, à piloter les décisions avec lucidité et à faire émerger des orientations durables.</p>
+      </article>
+      <article class="approach-card reveal">
+        <span class="approach-index">02</span>
+        <h3>Un accompagnement humain</h3>
+        <p>Chaque intervention s’appuie sur l’intelligence collective, la confiance et le développement des compétences clés de l’organisation.</p>
+      </article>
+      <article class="approach-card reveal">
+        <span class="approach-index">03</span>
+        <h3>Un impact mesurable</h3>
+        <p>Nos interventions visent des transformations concrètes : leadership, gouvernance, performance, cohésion et résilience des équipes.</p>
+      </article>
+    </div>
+  </section>
+
 </section>
 
 
@@ -623,7 +644,7 @@
       et les moments forts de notre parcours professionnel.
     </p>
     <div class="edl-gallery-decoration"></div>
-    <span class="edl-gallery-total">46 PHOTOGRAPHIES</span>
+    <span class="edl-gallery-total" id="edlGalleryTotal">PHOTOGRAPHIES</span>
   </header>
 
   <!-- Les 46 photos seront affichées ici automatiquement -->
@@ -949,12 +970,6 @@
     "IMG_5256.JPG.jpeg",
     "IMG_5258.JPG.jpeg",
     "IMG_5259.JPG.jpeg",
-    "IMG_5260.JPG.jpeg",
-    "IMG_5261.JPG.jpeg",
-    "IMG_5263.JPG.jpeg",
-    "IMG_5266.JPG.jpeg",
-    "IMG_5267.JPG.jpeg",
-    "IMG_5269.JPG.jpeg",
     "IMG_5271.JPG.jpeg",
     "IMG_5272.JPG.jpeg",
     "IMG_5274.JPG.jpeg",
@@ -975,8 +990,7 @@
     "IMG_5333.PNG",
     "IMG_5334.PNG",
     "IMG_5335.PNG",
-    "IMG_5336.PNG",
-    "IMG_5337.PNG"
+    "IMG_5336.PNG"
   ];
 
   const photos = imageFiles.map((fileName, index) => ({
@@ -987,6 +1001,11 @@
       .replace(/\s+/g, " ")
       .trim() || `Photo ${index + 1}`
   }));
+
+  const galleryTotal = document.getElementById("edlGalleryTotal");
+  if (galleryTotal) {
+    galleryTotal.textContent = `${photos.length} PHOTOGRAPHIES`;
+  }
 
   let current = 0;
 
@@ -1088,16 +1107,39 @@
 </script>
 
 
-    <section class="book-section" id="livres">
+    <section class="book-section" id="livres" aria-label="Ouvrage ETHOS DES LEADERS">
       <div class="book-pattern"></div>
       <div class="book-layout">
-        <div class="book-art reveal" aria-label="Illustration graphique du livre"><div class="book-shadow"></div><div class="book-cover"><div class="book-brand">ETHOS DES LEADERS</div><div class="book-lines"></div><div class="book-title">L’INTELLIGENCE<br><em>DES ENTREPRISES</em></div><div class="book-emblem">EDL</div><div class="book-author">AVOUDJI GBE PIERRE <small>Nom et graphie à confirmer</small></div></div><div class="book-stamp">LIVRE<br><span>01</span></div></div>
-        <div class="book-copy reveal"><div class="section-kicker light"><span>03</span> LA PENSÉE EN PARTAGE</div><p class="overline">À LA UNE · OUVRAGE</p><h2>L’intelligence<br><em>des entreprises</em></h2><p class="book-description">Un ouvrage consacré à la réflexion sur l’entreprise, sa dynamique et les leviers de son développement.</p><p class="placeholder-note dark-note">Le résumé officiel, la couverture définitive, l’éditeur, la date de parution, le prix et le lien d’achat sont à renseigner.</p><a href="#contact" class="button button-gold" data-inquiry="Demande d’achat du livre pour une organisation">Commander / se renseigner <span>↗</span></a></div>
+        <div class="book-art reveal" aria-label="Illustration du livre ETHOS DES LEADERS">
+          <img class="book-feature-image" src="images/IMG_5346.PNG" alt="Couverture du livre ETHOS DES LEADERS">
+        </div>
+        <div class="book-copy reveal">
+          <blockquote class="publisher-quote">
+            <p>La Maison d’Édition PLUMAMARE SÉNÉGAL salue le talent de Coach KOKOU PIERRE et son engagement au service de la littérature. Une plume d’exception dont nous sommes fiers.</p>
+            <cite>Maison d’Édition PLUMAMARE SÉNÉGAL</cite>
+          </blockquote>
+          <a href="#contact" class="button button-gold" data-inquiry="Demande d’achat du livre pour une organisation">Commander / se renseigner <span>↗</span></a>
+        </div>
       </div>
       <div class="upcoming">
-        <div><p class="overline">À VENIR</p><h3>Neuf autres livres en préparation</h3><p>Les titres seront annoncés officiellement au fil de leur préparation.</p></div>
+        <div class="upcoming-heading"><p class="overline">LA SUITE DU PARCOURS</p><h3>Les neuf ouvrages à venir</h3></div>
         <div class="upcoming-grid">
-          <div><span>02</span><p>Titre à annoncer</p></div><div><span>03</span><p>Titre à annoncer</p></div><div><span>04</span><p>Titre à annoncer</p></div><div><span>05</span><p>Titre à annoncer</p></div><div><span>06</span><p>Titre à annoncer</p></div><div><span>07</span><p>Titre à annoncer</p></div><div><span>08</span><p>Titre à annoncer</p></div><div><span>09</span><p>Titre à annoncer</p></div><div><span>10</span><p>Titre à annoncer</p></div>
+          <article class="upcoming-card"><span class="upcoming-number">02</span><div><h4>Les 10 étapes qui ont façonné l’homme que je suis</h4><p><time datetime="2027-02-21">21 février 2027</time><span>Symbole : le marbre</span></p></div></article>
+          <article class="upcoming-card"><span class="upcoming-number">03</span><div><h4>Deviens le leader que tu dois d’abord être</h4><p><time datetime="2027-05-23">23 mai 2027</time><span>Symbole : l’aigle</span></p></div></article>
+          <article class="upcoming-card"><span class="upcoming-number">04</span><div><h4>Tomber, résister, renaître : l’art du leadership inébranlable</h4><p><time datetime="2027-09-19">19 septembre 2027</time><span>Symbole : le phénix</span></p></div></article>
+          <article class="upcoming-card"><span class="upcoming-number">05</span><div><h4>L’art de comprendre les autres et de créer des alliances</h4><p><time datetime="2028-01-08">8 janvier 2028</time><span>Symbole : le loup</span></p></div></article>
+          <article class="upcoming-card"><span class="upcoming-number">06</span><div><h4>Du talent individuel à la puissance collective</h4><p><time datetime="2028-07-30">30 juillet 2028</time><span>Symbole : la fourmi</span></p></div></article>
+          <article class="upcoming-card"><span class="upcoming-number">07</span><div><h4>Transformer sans détruire, innover sans perdre son cap</h4><p><time datetime="2028-10-06">6 octobre 2028</time><span>Symbole : le caméléon</span></p></div></article>
+          <article class="upcoming-card"><span class="upcoming-number">08</span><div><h4>Votre image parle avant vous</h4><p><time datetime="2028-11-28">28 novembre 2028</time><span>Symbole : le paon</span></p></div></article>
+          <article class="upcoming-card"><span class="upcoming-number">09</span><div><h4>Voir loin, décider juste, gouverner durablement</h4><p><time datetime="2029-02-21">21 février 2029</time><span>Symbole : le baobab</span></p></div></article>
+          <article class="upcoming-card"><span class="upcoming-number">10</span><div><h4>Bâtir ce qui nous survivra</h4><p><time datetime="2029-12-01">1er décembre 2029</time><span>Symbole : la tortue</span></p></div></article>
+        </div>
+      </div>
+      <div class="book-partners">
+        <strong>Partenaires</strong>
+        <div class="partner-logos">
+          <img src="images/IMG_5347.JPG.jpeg" alt="Logo partenaire 1">
+          <img src="images/IMG_5348.JPG.jpeg" alt="Logo partenaire 2">
         </div>
       </div>
     </section>
@@ -1110,8 +1152,7 @@
         <article class="resource-card reveal"><div class="resource-icon">PDF</div><div><h3>CV professionnel</h3><p>Parcours, expériences et qualifications du Dr Coach Pierre Avoudjigbé Kokou.</p><span class="resource-status">Document officiel</span></div><a href="documents/CV%20DR%20COACH%20PIERRE%20AVOUDJIGB%C3%89%20KOKOU%20AO%C3%9CT%202026.pdf" class="download-link" download aria-label="Télécharger le CV professionnel">↓</a></article>
         <article class="resource-card reveal"><div class="resource-icon">PDF</div><div><h3>Demande d’information</h3><p>Pour obtenir plus de détails, contactez le cabinet pour un dossier ou une collaboration.</p><span class="resource-status">Contact</span></div><a href="#contact" class="download-link" aria-label="Contacter ETHOS DES LEADERS">↗</a></article>
       </div>
-      <p class="section-footnote">Les liens PDF sont des emplacements réservés : placez les documents officiels dans le dossier <code>documents/</code> en conservant les noms indiqués.</p>
-      <div class="credential-strip"><div><span class="credential-icon">✦</span><div><strong>Titres & distinctions</strong><p>Ajoutez ici les titres, certifications et distinctions vérifiables.</p></div></div><div><span class="credential-icon">◎</span><div><strong>Partenariats & références</strong><p>Logos et références à publier avec autorisation.</p></div></div></div>
+      <p class="section-footnote">Téléchargez la plaquette institutionnelle et le CV professionnel depuis cette section.</p>
     </section>
 
     <section class="section news-section" id="actualites">
@@ -1210,7 +1251,7 @@
               <span class="method-arrow">↗</span>
             </a>
           </div>
-          <div class="office-note"><span>⌖</span><div><strong>Adresse du cabinet</strong><p>Adresse physique à renseigner avant publication.</p><strong>Horaires & rendez-vous</strong><p>Sur rendez-vous — modalités et disponibilités à confirmer.</p></div></div>
+          <div class="office-note"><span>⌖</span><div><strong>Disponibilité</strong><p>Consultations, accompagnements et interventions sur rendez-vous.</p><strong>Contact rapide</strong><p>Disponible par téléphone, WhatsApp ou e-mail pour fixer une date de discussion.</p></div></div>
           <button class="text-link contact-download" id="saveContact">↓ Enregistrer le contact EDL (.vcf)</button>
         </div>
         <div class="contact-form-wrap reveal">
@@ -1225,7 +1266,7 @@
             <p class="form-privacy">Ce formulaire ouvre votre application de messagerie pour envoyer votre demande. Aucun message n’est enregistré sur ce site.</p>
             <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
           </form>
-          <div class="appointment-box"><span class="appointment-icon">◷</span><div><strong>Vous souhaitez un rendez-vous ?</strong><p>Contactez EDL par téléphone ou WhatsApp pour convenir d’une date.</p></div><a href="https://wa.me/221708494058?text=Bonjour%20ETHOS%20DES%20LEADERS%2C%20je%20souhaite%20convenir%20d%E2%80%99un%20rendez-vous." target="_blank" rel="noopener" aria-label="Demander un rendez-vous sur WhatsApp">↗</a></div>
+          <div class="appointment-box"><span class="appointment-icon">◷</span><div><strong>Vous souhaitez un rendez-vous ?</strong><p>Contactez EDL pour convenir d’une date et préciser votre besoin.</p></div><a href="#contact" data-inquiry="Demande d’accompagnement des entreprises" aria-label="Prendre rendez-vous via le formulaire de contact">↗</a></div>
         </div>
       </div>
     </section>

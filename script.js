@@ -2,9 +2,13 @@
 (() => {
   "use strict";
 
-  const GOOGLE_FORM_URL =
-    "https://docs.google.com/forms/d/e/1FAIpQLSdQUnwGehTKelP16AzAvp7Wf3mt5Ke32zD_y-g08ckw19i90A/viewform";
   const CONTACT_EMAIL = "ethosdesleadersedl@gmail.com";
+
+  const bookSection = document.getElementById("livres");
+  const gallerySection = document.getElementById("galerie");
+  if (bookSection && gallerySection) {
+    bookSection.after(gallerySection);
+  }
 
   // ============================================
   // THEME : MODE CLAIR / SOMBRE
@@ -213,8 +217,6 @@
       if (match) {
         select.value = match.value;
       }
-
-      window.open(GOOGLE_FORM_URL, "_blank", "noopener,noreferrer");
     });
   });
 
