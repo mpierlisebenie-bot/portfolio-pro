@@ -1,0 +1,13 @@
+# robots.txt for ETHOS DES LEADERS
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://ethosdesleaders.com/sitemap.xml
+
+# Disallow admin / private paths (none currently)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Crawl-delay (optional, be respectful)
+Crawl-delay: 10
