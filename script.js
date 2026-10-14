@@ -11,57 +11,6 @@
   }
 
   // ============================================
-  // THEME : MODE CLAIR / SOMBRE
-  // ============================================
-  const THEME_KEY = "edl-theme";
-  const root = document.documentElement;
-  const themeToggle = document.getElementById("themeToggle");
-
-  function getInitialTheme() {
-    try {
-      const savedTheme = localStorage.getItem(THEME_KEY);
-      if (savedTheme === "dark" || savedTheme === "light") {
-        return savedTheme;
-      }
-    } catch (error) {
-      console.warn("Impossible de lire le thème enregistré.");
-    }
-
-    return window.matchMedia("(prefers-color-scheme: dark)").matches
-      ? "dark"
-      : "light";
-  }
-
-  function applyTheme(theme) {
-    root.setAttribute("data-theme", theme);
-
-    try {
-      localStorage.setItem(THEME_KEY, theme);
-    } catch (error) {
-      console.warn("Impossible d'enregistrer le thème.");
-    }
-
-    if (themeToggle) {
-      themeToggle.setAttribute("aria-pressed", String(theme === "dark"));
-      themeToggle.setAttribute(
-        "aria-label",
-        theme === "dark"
-          ? "Activer le mode clair"
-          : "Activer le mode sombre"
-      );
-    }
-  }
-
-  applyTheme(getInitialTheme());
-
-  if (themeToggle) {
-    themeToggle.addEventListener("click", () => {
-      const currentTheme = root.getAttribute("data-theme");
-      applyTheme(currentTheme === "dark" ? "light" : "dark");
-    });
-  }
-
-  // ============================================
   // MENU DE NAVIGATION MOBILE
   // ============================================
   const menuToggle = document.getElementById("menuToggle");
